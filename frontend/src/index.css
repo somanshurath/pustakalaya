@@ -1,0 +1,152 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+h1 {
+    padding-top: 1em;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.Header {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    justify-content: center;
+}
+
+.BookshelfButton {
+    /* blue color */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 3rem;
+    right: 5rem;
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+
+    &:hover {
+        background-color: #0056b3;
+    }
+
+    @media screen and (max-width: 750px) {
+        right: 10%;
+        height: 4rem;
+        width: 4rem;
+        padding: 1rem 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* right below h1 with normal flow */
+    @media screen and (max-width: 550px) {
+        position: static;
+        width: 10rem;
+        height: 3rem;
+    }
+}
+
+.BookCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 0.8px solid #3f3f3f;
+    border-radius: 20px;
+    margin: 1rem;
+    width: 200px;
+    text-align: center;
+    height: 15em;
+}
+
+.SearchPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SearchResults {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.SearchBar {
+    height: 1.5em;
+    /* width depends on screen size */
+    width: 20rem;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: #ccc;
+    }
+
+    @media (max-width: 900px) {
+        width: 270px;
+    }
+
+    @media (max-width: 550px) {
+        width: 50%;
+    }
+}
+
+.AddButton {
+    background-color: #3bb357;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    /* position should be fixed with respect to bottom of card */
+
+    &:hover {
+        background-color: #34a751;
+    }
+}
+
+.cardcustom {
+    margin: 0.1rem 0 0.2rem 0;
+    font-weight: 300;
+}
+
+.authorname {
+    font-size: 0.8em;
+    margin: 0.1rem;
+}
+
+.edcnt {
+    font-size: 0.8em;
+    margin: 1rem;
+}
+
+.SearchResultsEmpty {
+    width: 50%;
+    height: 60vh;
+    color: #3f3f3f;
+    opacity: 0.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2rem;
+    text-align: center;
+}
